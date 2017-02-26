@@ -1,0 +1,40 @@
+<idea-plugin version="2">
+  <id>SetterAndGetter.ID</id>
+  <name>SetterAndGetter Plugin</name>
+  <version>1.0</version>
+  <vendor email="sinsyet@163.com" url="http://www.jianshu.com/p/3e10f74927a4">YourCompany</vendor>
+
+  <description><![CDATA[
+      Enter short description for your plugin here.<br>
+      <em>most HTML tags may be used</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="141.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="SetterAndGetter.ID" class="org.sins.plugins.SetterAndGetterAction" text="SetterAndGetter"
+            description="a plugin to generate Java bean field&#39;s set &amp; get method">
+      <add-to-group group-id="GenerateGroup" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt B"/>
+    </action>
+  </actions>
+
+</idea-plugin>
