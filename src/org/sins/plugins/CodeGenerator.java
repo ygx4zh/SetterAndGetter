@@ -135,9 +135,12 @@ public class CodeGenerator {
         methodName.append(methodType == GETTER ? "get" : "set");
         char c = filedName.charAt(0);
 
-        if (c >= 'a' && c <= 'z') {   //如果首字母小写,则将首字母转换为大写
-            methodName.append(filedName.substring(0, 1).toUpperCase()).append(filedName.substring(1));
-        } else {  //如果首字母为数字或者大写或者特殊符号,则直接添加
+        if (c >= 'a' && c <= 'z') {
+            methodName.append(filedName.substring(0, 1).toUpperCase());
+            if (filedName.length() > 1) {
+                methodName.append(filedName.substring(1));
+            }
+        } else {
             methodName.append(filedName);
         }
 
